@@ -2,7 +2,7 @@ pipeline{
     agent any
     
     environment {
-        CR_PAT= "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"
+        GITHUB_TOKEN= credentials('github-token')
     }
     
     stages{
@@ -25,8 +25,8 @@ pipeline{
             steps{
                 echo "Pushing the Image"
                 sh "export CR_PAT=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"
-                sh "echo ${CR_PAT} | docker login ghcr.io -u ashish8800 --password-stdin "
-                sh " docker push ghcr.io/ashish8800/node"
+                sh "echo $GITHUB_TOKEN_PSW | docker login ghcr.io -u $GITHUB_TOKEN_USR --password-stdin"
+                sh "docker push ghcr.io/ashish8800/node"
                 
             }
             
