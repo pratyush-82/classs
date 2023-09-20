@@ -2,7 +2,7 @@ pipeline{
     agent any
     
     environment {
-        CR_PAT= "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"
+        CR_PAT= "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"
     }
     
     stages{
@@ -24,7 +24,7 @@ pipeline{
         stage("Push to Docker Hub"){
             steps{
                 echo "Pushing the Image"
-                sh "export CR_PAT=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"
+                sh "export CR_PAT=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"
                 sh "echo ${CR_PAT} | docker login ghcr.io -u ashish8800 --password-stdin "
                 sh " docker push ghcr.io/ashish8800/node"
                 
