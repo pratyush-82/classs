@@ -3,4 +3,4 @@ services :
   web :
     image : ghcr.io/ashish8800/node:latest
     ports:
-      - "8000:8000"
+      - "8085:8085"
