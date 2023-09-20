@@ -16,7 +16,7 @@ pipeline{
         stage("build"){
             steps{
                 echo "Building the Image"
-                sh "docker build -t my-node-app ."
+                sh "docker build -t my-node-app /var/lib/jenkins/workspace/node_app_test"
                 sh "docker tag my-node-app ghcr.io/ashish8800/node:latest"
             }
             
