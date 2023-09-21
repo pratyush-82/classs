@@ -13,7 +13,7 @@ pipeline{
             }
             
         }
-        stage("build"){
+        stage("building the code"){
             steps{
                 echo "Building the Image"
                 sh "cd ${WORKSPACE} && docker build -t my-node-app ."
