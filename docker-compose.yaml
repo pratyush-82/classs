@@ -4,4 +4,4 @@ services :
     image : ghcr.io/ashish8800/node:latest
     network_mode: bridge 
     ports:
-      - "8099:8099"
+      - "8099:80"
