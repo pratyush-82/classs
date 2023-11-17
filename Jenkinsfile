@@ -24,7 +24,7 @@ pipeline{
         stage("Push to Docker Hub"){
             steps{
                 echo "Pushing the Image"
-                sh "export CR_PAT=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"
+                sh "export CR_PAT=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"
                 sh "echo $GITHUB_TOKEN_PSW | docker login ghcr.io -u $GITHUB_TOKEN_USR --password-stdin"
                 sh "docker push ghcr.io/ashish8800/node"
                 
