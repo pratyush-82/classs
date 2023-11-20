@@ -1,7 +1,7 @@
 version : "3.3"
 services :
   web :
-    image : ghcr.io/ashish8800/node:latest
+    image : ghcr.io/pratyush-82/node:latest
     network_mode: bridge 
     ports:
       - "8099:80"
