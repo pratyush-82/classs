@@ -3,7 +3,5 @@ services :
   web :
     image : ghcr.io/pratyush-82/node:latest
     network_mode: bridge
-    volumes : 
-      - /usr/bin/jenkins_home
     ports:
       - "8099:80"
